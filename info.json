@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "6eedb899c8e774d0c1251173fd60e81d79b89788",
+    "author": "Leo Orozco-Mulfinger <61469564+GLOrozcoM@users.noreply.github.com>",
+    "time": "2022-07-23 06:24:02",
+    "files": 1,
+    "merge": true,
+    "message": "Merge pull request #34 from ropensci/fix/failing_command\n\nSimple devtools command fix"
+  },
+  "repo": "https://github.com/ropensci/epair",
+  "pkg": "epair"
+}
