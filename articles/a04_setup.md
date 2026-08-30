@@ -1,0 +1,40 @@
+# Setup
+
+## Authentication setup
+
+You’ll need to acquire an API key from AQS. To do so, `epair` provides
+the function `get.aqs.key()` with your email as its parameter. After
+calling `get.aqs.key()` check your email to obtain your key. Be sure to
+confirm your account by clicking on the link in the email if acquiring a
+key for the first time.
+
+`epair` uses `.Renviron` to access your email and key when making calls.
+A simple way to setup your key and email is through the `usethis`
+package with the following command.
+
+[`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html)
+
+This will open up the .Renviron file where you can store your email and
+key. You MUST store your key and email using the exactformat
+`aqs_api_key=‘received_key’` and `aqs_email=‘youremail@domain.com’`.
+Otherwise, the package will assume you haven’t declared your
+credentials.
+
+Note you also need to restart R to ensure that changes take effect.
+
+If even after restarting R, `Sys.getenv(‘aqs_email’)` is returning a
+null string, you can also try setting the variables with the
+[`Sys.setenv()`](https://rdrr.io/r/base/Sys.setenv.html) command as
+follows `Sys.setenv(aqs_email = “youremail@domain.com”)` and
+`Sys.setenv(aqs_api_key = “received_key”)`.
+
+## Checking if the API is running
+
+All queries automatically check if the API is running. It might make
+sense, however, to check the API is up before making multiple queries.
+The package allows you to make this check easily.
+
+``` r
+
+is.API.running()
+```

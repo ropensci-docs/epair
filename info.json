@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "e8f1f1d4ba115f8189e76ddea2f9206d2ab8cc11",
+    "author": "accipio09 <glorozcom@protonmail.com>",
+    "time": "2025-12-01T19:01:14Z",
+    "files": 1,
+    "merge": true,
+    "message": "Merge pull request #38 from ropensci/ogilani-patch-1\n\nupdated action cache v4.2.0"
+  },
+  "repo": "https://github.com/ropensci/epair",
+  "pkg": "epair",
+  "time": "2026-08-30T07:42:39Z"
+}
