@@ -1,0 +1,95 @@
+# Get samples (finest grained data) for a measurement site.
+
+Get samples (finest grained data) for a measurement site.
+
+## Usage
+
+``` r
+get_samples_in_site(
+  bdate,
+  edate,
+  state.fips,
+  county,
+  site,
+  param,
+  cached = TRUE,
+  cache_directory = "/cache",
+  duration = NULL,
+  cbdate = NULL,
+  cedate = NULL
+)
+```
+
+## Arguments
+
+- bdate:
+
+  Beginning date to check. Year, month, day format.
+
+- edate:
+
+  Ending date to check. Year, month, day format.
+
+- state.fips:
+
+  State FIPS code. Use get_state_fips() if unsure.
+
+- county:
+
+  County code. Use get_counties_in_state() if unsure.
+
+- site:
+
+  Measurement site code. Use get_sites_by_county() if unsure.
+
+- param:
+
+  Pollutant parameter that site is measuring.
+
+- cached:
+
+  TRUE or FALSE specifying if the data from the call is to be cached.
+  Default: TRUE. (Optional)
+
+- cache_directory:
+
+  Place inside user-level cache directory to store the cached data.
+  Default: "/cache". (Optional)
+
+- duration:
+
+  The 1-character AQS sample duration code. (Optional)
+
+- cbdate:
+
+  Change begin date. (Optional)
+
+- cedate:
+
+  Change end date. (Optional)
+
+## Value
+
+API response containing samples at given site.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+bdate <- "20160101"
+edate <- "20160102"
+state.fips <- "15"
+county <- "001"
+param <- "42401"
+site <- "0007"
+cbdate <- "20200101"
+cedate <- "20201231"
+result <- get_samples_in_site(bdate = bdate, 
+                              edate = edate, 
+                              param = param, 
+                              state.fips = state.fips,
+                              county = county,
+                              site = site)
+result$Data
+} # }
+```
